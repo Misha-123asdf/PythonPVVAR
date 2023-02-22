@@ -1,10 +1,8 @@
-Mes = "do not eat all my oranges"
-Table = 'abcdefghijklmnopqrstuvwxyz '
-Key = 1
-
+Mes = "hello"
+Table = 'helo'
+Key = -5
 
 newString=''
-
 n=0
 
 for count in Table:
@@ -16,16 +14,18 @@ for charM in Mes:
         if charM==charT:
             break
 
-    if k+Key<n:
-        k+=Key
-        
-        newString+=Table[k]
 
-    if k+Key>=n:
+    if Key>=0:
         i=(k+Key)//n
         nc=(k+Key)-i*n
         newString+=Table[nc]
-  
-            
-assert newString=="epaopuafbuabmmanzapsbohft"
+        
+    if  Key<0:
+        i=(k+Key)//n
+        nc=(k+Key)+(i+1)*(-n)
+        newString+=Table[nc]
+
+
+print(newString)            
+assert newString=="oheel"
             

@@ -1,0 +1,31 @@
+Mes = "do not eat all my oranges"
+Table = 'abcdefghijklmnopqrstuvwxyz '
+Key = 1
+
+
+newString=''
+
+n=0
+
+for count in Table:
+    n+=1
+ 
+
+for charM in Mes:
+    for k,charT in enumerate(Table):
+        if charM==charT:
+            break
+
+    if k+Key<n:
+        k+=Key
+        
+        newString+=Table[k]
+
+    if k+Key>=n:
+        i=(k+Key)//n
+        nc=(k+Key)-i*n
+        newString+=Table[nc]
+  
+            
+assert newString=="epaopuafbuabmmanzapsbohft"
+            
